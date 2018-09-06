@@ -178,12 +178,12 @@ if the are not available (e.g \Rpackage{gdata}).
 installedPckgs <- installed.packages()[,"Package"]
 ###Define the list of desired libraries
 pckgListBIOC <- c("Biobase", "limma", "gdata")
-###Source the biocLite.R script from Bioconductor
+###Install BiocManager if needed
 if (!requireNamespace("BiocManager", quietly=TRUE))
     install.packages("BiocManager")
 ###Load the packages, install them from Bioconductor if needed
 for (pckg in pckgListBIOC) {
-	if (! pckg %in% installedPckgs) biocLite(pckg)
+	if (! pckg %in% installedPckgs) BiocManager::install(pckg)
 	require(pckg, character.only=TRUE)
 }
 @
