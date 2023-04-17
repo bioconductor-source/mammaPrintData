@@ -180,7 +180,7 @@ installedPckgs <- installed.packages()[,"Package"]
 pckgListBIOC <- c("Biobase", "limma", "readxl")
 ###Install BiocManager if needed
 if (!requireNamespace("BiocManager", quietly=TRUE))
-    install.packages("BiocManager")
+    install.packages("BiocManager", repo="https://cloud.r-project.org/")
 ###Load the packages, install them from Bioconductor if needed
 for (pckg in pckgListBIOC) {
 	if (! pckg %in% installedPckgs) BiocManager::install(pckg)
