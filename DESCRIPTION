@@ -9,8 +9,10 @@ biocViews: ExperimentData, ExpressionData, CancerData, BreastCancerData, Microar
 Author: Luigi Marchionni <marchion@jhu.edu>
 Maintainer: Luigi Marchionni <marchion@jhu.edu>
 Depends: R (>= 2.13.0)
-Suggests: Biobase, gdata, limma
+Suggests: Biobase, readxl, limma
 License: Artistic-2.0
 URL: http://luigimarchionni.org/breastTSP.html
 LazyLoad: yes
 Packaged: 2013-05-14 01:56:09 UTC; marchion
+
+    
